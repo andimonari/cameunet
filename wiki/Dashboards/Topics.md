@@ -20,4 +20,4 @@ keywords that are likely page names or search terms.
 
 ## Website
 
-- Keywords: Index Page, C Mark Logo, Hero Arch, Theming, responsive
+- Keywords: Index Page, C Mark Logo, Hero Arch, Theming, responsive, Cloudflare Deployment

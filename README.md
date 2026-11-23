@@ -14,4 +14,16 @@ python3 -m http.server 8000
 
 Then go to http://localhost:8000.
 
+## Deploy
+
+The live site is https://cameunet.uk, hosted as a Cloudflare Worker with static assets. After `npx wrangler@4 login`, deploy with:
+
+```sh
+npx wrangler@4 deploy
+```
+
+Files listed in `.assetsignore` are not published.
+
+## Wiki
+
 Project knowledge (design notes, partners, how the logo and arch are built) lives in the `wiki/` folder.

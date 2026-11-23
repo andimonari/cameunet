@@ -8,6 +8,8 @@ Static one-page website for Cambridge Europe Network CIC ("CamEUnet"). No build,
 
 Preview: `python3 -m http.server 8000`, then open http://localhost:8000.
 
+Deploy: `npx wrangler@4 deploy` (Cloudflare Workers static assets, config in `wrangler.jsonc`, serves cameunet.uk and www.cameunet.uk). The repo root is the asset directory; `.assetsignore` keeps docs, wiki and config off the site, so add any new non-site file there.
+
 ## Structure that spans files
 
 - `index.html` holds all markup and CSS (one `<style>` block). The comment at the top of that block records the design intent (voice, idea, colour, type, layout). Keep changes consistent with it.

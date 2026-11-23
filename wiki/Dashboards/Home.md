@@ -11,4 +11,4 @@ What we know about the website of [[Cambridge Europe Network CIC]] and the work 
 
 - The organisation: [[Cambridge Europe Network CIC]], [[Three Pillars]]
 - Europe: [[Erasmus Plus]], [[Tredu Club]], [[ACPELIA]]
-- The site: [[Index Page]], [[C Mark Logo]], [[Hero Arch]], [[Theming Tokens]]
+- The site: [[Index Page]], [[C Mark Logo]], [[Hero Arch]], [[Theming Tokens]], [[Cloudflare Deployment]]
