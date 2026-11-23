@@ -16,7 +16,7 @@ Then go to http://localhost:8000.
 
 ## Deploy
 
-The live site is https://cameunet.uk, hosted as a Cloudflare Worker with static assets. After `npx wrangler@4 login`, deploy with:
+The live site is https://cameunet.uk, hosted as a Cloudflare Worker with static assets. A GitHub Action deploys every push to `main`. It needs two repository secrets, `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. To deploy by hand, run `npx wrangler@4 login` once, then:
 
 ```sh
 npx wrangler@4 deploy
