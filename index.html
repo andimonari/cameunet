@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cambridge Europe Network</title>
+<meta name="description" content="Cambridge Europe Network CIC is a Cambridge community interest company using innovation, technology and inclusive sport to create opportunity, tackle discrimination and build links between Cambridge, the UK and Europe.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE occasion: a community organisation's front door, warm and confident
+   IDEA a bridge: the faceted C mark stretched into an arch from Cambridge to Europe
+   PICTURE a full-width faceted arch in the brand colours across the navy hero
+   COLOUR navy field, white ground, electric blue lead, union red and EU gold as accents
+   TYPE Montserrat ExtraBold display + Inter text, as in the brand board
+   LAYOUT laptop: title across the top, arch full width beneath; phone: title, arch, buttons */
+:root{color-scheme:light dark;--bg:light-dark(#FBFCFE,#0A1230);--ink:light-dark(#0B1F5B,#EEF2FB);--muted:light-dark(#46557F,#B9C6E8);--panel:light-dark(#EEF2FA,#132050);--line:light-dark(#D6DDEE,#25336A);--link:light-dark(#0057FF,#7FAEFF);--navy:#0B1F5B;--blue:#0057FF;--red:#E0313C;--gold:#F5B400}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Inter,system-ui,Arial,sans-serif;overflow-x:clip}
+img,svg{max-width:100%}
+a{color:var(--link)}
+h1,h2,h3{font-family:Montserrat,Arial,sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h2{font-size:clamp(28px,3.4vw,42px);font-weight:800}
+h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding-block:clamp(44px,6vw,88px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.lede{font-size:clamp(17px,1.4vw,19px);color:var(--muted);max-width:62ch;margin-top:16px}
+/* nav */
+header{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;padding:0 max(5vw,16px)}
+.nav{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:24px;min-height:64px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:800 21px/1 Montserrat,Arial,sans-serif;letter-spacing:-.02em}
+.brand svg{width:34px;height:35px}
+.brand b{color:#7FAEFF;font-weight:800}
+.links{display:flex;gap:4px 20px;flex-wrap:wrap;margin-left:auto}
+.links a{color:#DCE4F7;text-decoration:none;font-weight:500;font-size:15px;padding:10px 0}
+.links a:hover,.links a:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:6px}
+/* hero */
+.hero{background:linear-gradient(90deg,rgba(11,31,91,.94) 0%,rgba(11,31,91,.82) 42%,rgba(11,31,91,.38) 100%),linear-gradient(180deg,rgba(11,31,91,0) 45%,rgba(11,31,91,.9) 100%),url(hero.jpg) center right/cover no-repeat,var(--navy);color:#fff;padding:clamp(40px,6vw,80px) max(5vw,16px) 0}
+.hero h1,.hero .lede{text-shadow:0 1px 12px rgba(11,31,91,.5)}
+@media (max-width:600px){.hero{background:linear-gradient(180deg,rgba(11,31,91,.88),rgba(11,31,91,.92)),url(hero.jpg) 70% center/cover no-repeat,var(--navy)}}
+.hero h1{font-size:clamp(36px,5.6vw,72px);font-weight:800;max-width:15ch}
+.hero .lede{color:#C9D4F0;max-width:58ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.btn.ghost{border:1.5px solid #8FA3D6;color:#fff}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.arch{margin-top:clamp(24px,4vw,48px)}
+.arch svg{display:block;width:100%;height:auto}
+.ends{display:flex;justify-content:space-between;gap:16px;padding:12px 0 28px;color:#DCE4F7;font-size:14.5px;border-top:1px solid rgba(201,212,240,.35)}
+.ends strong{color:#fff;font-weight:600}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:center}
+.facts{display:grid;gap:14px}
+.fact{background:var(--panel);border-radius:16px;padding:20px 22px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
+.fact svg{width:40px;height:40px}
+.fact p{color:var(--muted);font-size:15.5px}
+.fact h3{margin-bottom:2px}
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+.pillar{border-radius:20px;padding:28px;color:#fff;display:flex;flex-direction:column;gap:12px;min-height:280px}
+.pillar svg{width:56px;height:56px}
+.pillar h3{font-size:24px}
+.pillar p{opacity:.95}
+.p-blue{background:var(--blue)}
+.p-gold{background:var(--gold);color:var(--navy)}
+.p-red{background:#C8233A}
+.pillar ul{margin:auto 0 0;padding-left:18px;font-size:15px}
+/* erasmus */
+.erasmus{background:var(--panel)}
+.how{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.steps li{background:var(--bg);border-radius:16px;padding:18px 20px;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.steps .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--navy)}
+.steps .ic svg{width:24px;height:24px}
+.steps p{color:var(--muted);font-size:15.5px}
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+.proj{border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.tag{align-self:flex-start;font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px;background:var(--panel);color:var(--ink)}
+.proj p{color:var(--muted);font-size:15.5px}
+.proj .meta{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.note{margin-top:18px;font-size:14px;color:var(--muted)}
+/* partners */
+.partners{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+.partner{background:var(--panel);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:8px}
+.partner .where{font-size:14px;color:var(--muted)}
+.partner p{color:var(--muted);font-size:15.5px}
+.partner a{margin-top:auto;font-weight:600}
+.partner.open{background:transparent;border:1.5px dashed var(--line)}
+/* involve */
+.involve{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:36px;border-top:1px solid var(--line)}
+.inv{padding:26px 26px 6px 0;display:flex;flex-direction:column;gap:10px}
+.inv+.inv{padding-left:26px;border-left:1px solid var(--line)}
+.inv p{color:var(--muted);font-size:15.5px}
+/* contact */
+.contact{background:var(--navy);color:#fff}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,72px);align-items:center}
+.contact .lede{color:#C9D4F0}
+.mail{font:800 clamp(22px,3vw,34px)/1.1 Montserrat,Arial,sans-serif;color:#fff;text-decoration:none;border-bottom:3px solid var(--gold);overflow-wrap:anywhere}
+.mail:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.contact .mark{width:100%;max-width:300px;height:auto;justify-self:end}
+footer{background:#071443;color:#B9C6E8;font-size:14px;padding:28px max(5vw,16px)}
+.foot{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+.foot em{font-family:Montserrat,Arial,sans-serif;font-style:italic;color:var(--gold)}
+@media (max-width:900px){.pillars,.projects,.partners{grid-template-columns:minmax(0,1fr)}.pillar{min-height:0}.about,.how,.contact-grid{grid-template-columns:minmax(0,1fr)}.contact .mark{justify-self:start;max-width:180px}.involve{grid-template-columns:minmax(0,1fr)}.inv,.inv+.inv{padding:22px 0;border-left:0;border-bottom:1px solid var(--line)}}
+@media (max-width:600px){.links{margin-left:0;width:100%;padding-bottom:6px}.links a{padding:6px 0}header{position:static}.ends{font-size:13px}}
+@media (prefers-reduced-motion:no-preference){.arch polygon{animation:rise .7s ease-out both}}
+@keyframes rise{from{opacity:0}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="cm0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E63F0"/><stop offset="1" stop-color="#64B4FF"/></linearGradient><linearGradient id="cm1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A4FE0"/><stop offset="1" stop-color="#4A95FF"/></linearGradient><linearGradient id="cm2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A5AE6"/><stop offset="1" stop-color="#2C74F6"/></linearGradient><linearGradient id="cm3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3478F5"/><stop offset="1" stop-color="#0B45D2"/></linearGradient><linearGradient id="cm4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1652E2"/><stop offset="1" stop-color="#4C9DFF"/></linearGradient><linearGradient id="cm5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C43CF"/><stop offset="1" stop-color="#3380FF"/></linearGradient><linearGradient id="cm6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E81F3A"/><stop offset="1" stop-color="#FF5252"/></linearGradient><linearGradient id="cm7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B0102A"/><stop offset="1" stop-color="#E0313C"/></linearGradient><linearGradient id="cm8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DADDE5"/></linearGradient><linearGradient id="cm9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ECEEF3"/><stop offset="1" stop-color="#BCC1CC"/></linearGradient><linearGradient id="cm10" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C8102E"/><stop offset="1" stop-color="#EE3C4E"/></linearGradient><linearGradient id="cm11" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8384A"/><stop offset="1" stop-color="#C11D31"/></linearGradient><linearGradient id="cm12" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A1538"/><stop offset="1" stop-color="#C8233A"/></linearGradient><linearGradient id="cm13" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF3A4E"/><stop offset="1" stop-color="#D01C34"/></linearGradient><linearGradient id="cm14" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE066"/><stop offset="1" stop-color="#FFC21A"/></linearGradient><linearGradient id="cm15" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC21A"/><stop offset="1" stop-color="#F2A500"/></linearGradient><linearGradient id="cm16" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EE9C00"/><stop offset="1" stop-color="#FFCB3A"/></linearGradient>
+<symbol id="cmark" viewBox="30 20 740 766"><polygon points="178,128 418,28 330,207" fill="url(#cm0)"/><polygon points="418,28 655,92 330,207" fill="url(#cm1)"/><polygon points="655,92 468,268 330,207" fill="url(#cm2)"/><polygon points="330,207 468,268 338,412" fill="url(#cm3)"/><polygon points="178,128 330,207 38,375" fill="url(#cm4)"/><polygon points="38,375 330,207 95,600" fill="url(#cm5)"/><polygon points="655,92 760,222 468,268" fill="url(#cm6)"/><polygon points="468,268 760,222 612,355" fill="url(#cm7)"/><polygon points="330,207 338,412 95,600" fill="url(#cm8)"/><polygon points="338,412 340,500 95,600" fill="url(#cm9)"/><polygon points="95,600 340,500 345,577" fill="url(#cm10)"/><polygon points="340,500 345,577 468,610" fill="url(#cm11)"/><polygon points="95,600 345,577 300,778" fill="url(#cm12)"/><polygon points="345,577 468,610 300,778" fill="url(#cm13)"/><polygon points="468,610 606,498 752,614" fill="url(#cm14)"/><polygon points="468,610 752,614 300,778" fill="url(#cm15)"/><polygon points="300,778 752,614 612,772" fill="url(#cm16)"/></symbol>
+</defs>
+</svg>
+
+<header>
+<nav class="nav" aria-label="Main">
+<a class="brand" href="#top"><svg aria-hidden="true"><use href="#cmark"/></svg><span>Cam<b>EU</b>net</span></a>
+<div class="links">
+<a href="#about">About</a>
+<a href="#what">What we do</a>
+<a href="#erasmus">Erasmus+</a>
+<a href="#projects">Projects</a>
+<a href="#partners">Partners</a>
+<a href="#involved">Get involved</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+<div class="wrap">
+<h1 id="hero-title">Innovation, inclusion and sport, from Cambridge to Europe.</h1>
+<p class="lede">Cambridge Europe Network is a community interest company based in Cambridge. We create opportunities for young people through international exchanges, inclusive sport and digital skills, with partners across Europe.</p>
+<div class="cta">
+<a class="btn gold" href="#involved">Get involved</a>
+<a class="btn ghost" href="#erasmus">How we work with Erasmus+</a>
+</div>
+<div class="arch">
+<svg viewBox="0 0 1200 250" role="img" aria-label="A faceted bridge in blue, white, red and gold arching from Cambridge to Europe">
+<polygon points="40,230 83,210 40,230" fill="#0A47D6"/><polygon points="83,210 83,214 40,230" fill="#083AAF"/><polygon points="83,210 126,189 126,199" fill="#084ADE"/><polygon points="83,210 126,199 83,214" fill="#063CB6"/><polygon points="126,189 169,170 126,199" fill="#064DE6"/><polygon points="169,170 169,184 126,199" fill="#043FBC"/><polygon points="169,170 212,151 212,170" fill="#0450EE"/><polygon points="169,170 212,170 169,184" fill="#0341C3"/><polygon points="212,151 255,133 212,170" fill="#0253F5"/><polygon points="255,133 255,156 212,170" fill="#0144C8"/><polygon points="255,133 298,117 298,144" fill="#0056FD"/><polygon points="255,133 298,144 255,156" fill="#0046CF"/><polygon points="298,117 342,103 298,144" fill="#0D62FF"/><polygon points="342,103 342,133 298,144" fill="#0A50D1"/><polygon points="342,103 385,90 385,123" fill="#1D71FF"/><polygon points="342,103 385,123 342,133" fill="#175CD1"/><polygon points="385,90 428,79 385,123" fill="#2E7FFF"/><polygon points="428,79 428,115 385,123" fill="#2568D1"/><polygon points="428,79 471,71 471,108" fill="#3E8EFF"/><polygon points="428,79 471,108 428,115" fill="#3274D1"/><polygon points="471,71 514,65 471,108" fill="#539EFF"/><polygon points="514,65 514,104 471,108" fill="#4481D1"/><polygon points="514,65 557,61 557,101" fill="#94C1FC"/><polygon points="514,65 557,101 514,104" fill="#799ECE"/><polygon points="557,61 600,60 557,101" fill="#D4E4F9"/><polygon points="600,60 600,100 557,101" fill="#ADBACC"/><polygon points="600,60 643,61 643,101" fill="#F1D6DA"/><polygon points="600,60 643,101 600,100" fill="#C5AFB2"/><polygon points="643,61 686,65 643,101" fill="#EA979E"/><polygon points="686,65 686,104 643,101" fill="#BF7B81"/><polygon points="686,65 729,71 729,108" fill="#E45861"/><polygon points="686,65 729,108 686,104" fill="#BA484F"/><polygon points="729,71 772,79 729,108" fill="#DD2F3B"/><polygon points="772,79 772,115 729,108" fill="#B52630"/><polygon points="772,79 815,90 815,123" fill="#D62A38"/><polygon points="772,79 815,123 772,115" fill="#AF222D"/><polygon points="815,90 858,103 815,123" fill="#CE2636"/><polygon points="858,103 858,133 815,123" fill="#A81F2C"/><polygon points="858,103 902,117 902,144" fill="#C72133"/><polygon points="858,103 902,144 858,133" fill="#A31B29"/><polygon points="902,117 945,133 902,144" fill="#C72D2C"/><polygon points="945,133 945,156 902,144" fill="#A32424"/><polygon points="945,133 988,151 988,170" fill="#DF7614"/><polygon points="945,133 988,170 945,156" fill="#B66010"/><polygon points="988,151 1031,170 988,170" fill="#F5B503"/><polygon points="1031,170 1031,184 988,170" fill="#C89402"/><polygon points="1031,170 1074,189 1074,199" fill="#F8BF18"/><polygon points="1031,170 1074,199 1031,184" fill="#CB9C13"/><polygon points="1074,189 1117,210 1074,199" fill="#FBC92D"/><polygon points="1117,210 1117,214 1074,199" fill="#CDA424"/><polygon points="1117,210 1160,230 1160,230" fill="#FED342"/><polygon points="1117,210 1160,230 1117,214" fill="#D0AD36"/>
+<use href="#cmark" x="0" y="196" width="52" height="54"/>
+<rect x="1148" y="214" width="34" height="34" rx="6" fill="#132A75"/>
+<g fill="#F5B400"><circle cx="1165" cy="221" r="1.8"/><circle cx="1172" cy="223" r="1.8"/><circle cx="1175" cy="231" r="1.8"/><circle cx="1172" cy="239" r="1.8"/><circle cx="1165" cy="241" r="1.8"/><circle cx="1158" cy="239" r="1.8"/><circle cx="1155" cy="231" r="1.8"/><circle cx="1158" cy="223" r="1.8"/></g>
+</svg>
+</div>
+<div class="ends"><span><strong>Cambridge</strong>, England</span><span><strong>Europe</strong>: Austria, Cyprus and growing</span></div>
+</div>
+</section>
+
+<section class="band" id="about" aria-labelledby="about-title">
+<div class="wrap about">
+<div>
+<h2 id="about-title">A bridge between Cambridge and Europe</h2>
+<p class="lede">We use innovation, technology and inclusive sport to create opportunity, tackle discrimination and build stronger links between Cambridge, the UK and Europe.</p>
+<p class="lede">As a community interest company, everything we earn and build stays tied to that mission. With the UK back in Erasmus+ from 2027, we help young people, youth workers and coaches in Cambridge take part in European projects, and we welcome European groups to our city.</p>
+</div>
+<div class="facts">
+<div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="var(--link)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg><div><h3>Based in Cambridge</h3><p>Rooted in the city’s clubs, schools and youth services.</p></div></div>
+<div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="var(--link)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><div><h3>European by design</h3><p>Projects co-designed with partners in Austria, Cyprus and beyond.</p></div></div>
+<div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="var(--link)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><h3>Not for private profit</h3><p>A community interest company with an asset lock.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="band" id="what" aria-labelledby="what-title" style="padding-top:0">
+<div class="wrap">
+<h2 id="what-title">What we do</h2>
+<p class="lede">Every project brings together at least two of our three pillars.</p>
+<div class="pillars">
+<article class="pillar p-blue">
+<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M8 11l2 2 4-4"/></svg>
+<h3>Innovation</h3>
+<p>Digital and AI skills for young people and youth workers, and new tools that make activities easier to join.</p>
+<ul><li>Digital skills workshops</li><li>Training for youth workers and coaches</li><li>Open toolkits we create with partners</li></ul>
+</article>
+<article class="pillar p-gold">
+<svg viewBox="0 0 24 24" fill="none" stroke="#0B1F5B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="4.5" r="2"/><path d="M8 9l4-2 3 3-2 4 3 3v4"/><path d="M13 14l-3 3-4 1"/><path d="M15 10l3 2h3"/></svg>
+<h3>Inclusive sport</h3>
+<p>Grassroots and adapted sport as a way into learning, health and belonging, for every ability and background.</p>
+<ul><li>Mixed-ability sport sessions</li><li>Exchanges for grassroots coaches</li><li>Outdoor and active learning abroad</li></ul>
+</article>
+<article class="pillar p-red">
+<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2.5 20a5.5 5.5 0 0 1 11 0M10.5 20a5.5 5.5 0 0 1 11 0"/></svg>
+<h3>Inclusion</h3>
+<p>Reaching young people with fewer opportunities, and tackling racism, antisemitism and all discrimination.</p>
+<ul><li>Youth exchanges open to all</li><li>Anti-discrimination workshops</li><li>Support so cost is never the barrier</li></ul>
+</article>
+</div>
+</div>
+</section>
+
+<section class="band erasmus" id="erasmus" aria-labelledby="erasmus-title">
+<div class="wrap how">
+<div>
+<h2 id="erasmus-title">Working with Erasmus+</h2>
+<p class="lede">Erasmus+ is the EU’s programme for education, training, youth and sport. The UK rejoins it from 2027, so Cambridge organisations can once again take part in European projects on equal terms.</p>
+<p class="lede">We start as a partner in projects run by experienced European organisations, then lead our own.</p>
+<p class="lede"><a href="https://www.erasmusplus.org.uk/">More about Erasmus+ in the UK</a></p>
+</div>
+<ol class="steps">
+<li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5B400" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a4.5 4.5 0 0 1 8 0"/></svg></span><div><h3>Youth exchanges</h3><p>Groups of young people from several countries meet for a week or two of shared activities, sport and learning.</p></div></li>
+<li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5B400" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M7 10v5c3 2 7 2 10 0v-5"/></svg></span><div><h3>Training for youth workers and coaches</h3><p>Courses and job shadowing abroad, bringing new methods back to Cambridge.</p></div></li>
+<li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5B400" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12l3 3 5-6"/><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0"/></svg></span><div><h3>Partnership projects</h3><p>Joint projects with European partners that produce lasting results, such as toolkits for clubs.</p></div></li>
+<li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5B400" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"/></svg></span><div><h3>Hosting in Cambridge</h3><p>Welcoming European groups to Cambridge with local clubs and youth services.</p></div></li>
+</ol>
+</div>
+</section>
+
+<section class="band" id="projects" aria-labelledby="projects-title">
+<div class="wrap">
+<h2 id="projects-title">Projects in development</h2>
+<p class="lede">These are the first ideas we are developing with our partners for the 2027 Erasmus+ call.</p>
+<div class="projects">
+<article class="proj"><span class="tag">Inclusion · Sport</span><h3>Play Fair Lab</h3><p>Helping grassroots sports clubs prevent racism, antisemitism and other discrimination, with a practical toolkit and pilot sessions in three countries.</p><p class="meta">Planned with partners in Austria and Cyprus</p></article>
+<article class="proj"><span class="tag">Innovation · Inclusion</span><h3>Digital Coach</h3><p>Training youth workers and coaches to use digital tools and AI responsibly to plan, adapt and promote inclusive sessions.</p><p class="meta">Led by Cambridge Europe Network</p></article>
+<article class="proj"><span class="tag">Sport · Inclusion</span><h3>Bridge Games</h3><p>A youth exchange in Cambridge built around mixed-ability sport, with young people from across Europe.</p><p class="meta">Planned for 2028</p></article>
+</div>
+<p class="note">All projects depend on Erasmus+ funding decisions.</p>
+</div>
+</section>
+
+<section class="band" id="partners" aria-labelledby="partners-title" style="padding-top:0">
+<div class="wrap">
+<h2 id="partners-title">Our partners</h2>
+<p class="lede">We work with a small network of experienced European organisations that share our values.</p>
+<div class="partners">
+<article class="partner"><h3>Tredu Club</h3><p class="where">Austria</p><p>A sport and community club combining sport, youth development and sustainable living, with Erasmus+ projects across Europe.</p><a href="https://tredu.club/">tredu.club</a></article>
+<article class="partner"><h3>ACPELIA</h3><p class="where">Pissouri, Cyprus</p><p>A youth NGO working on cultural heritage, sustainability and ending discrimination and racism.</p><a href="https://acpelia.org/">acpelia.org</a></article>
+<article class="partner open"><h3>Become a partner</h3><p class="where">Europe and the UK</p><p>We are looking for organisations working on digital youth work, adapted sport and inclusion.</p><a href="#contact">Talk to us</a></article>
+</div>
+</div>
+</section>
+
+<section class="band" id="involved" aria-labelledby="involved-title" style="padding-top:0">
+<div class="wrap">
+<h2 id="involved-title">Get involved</h2>
+<div class="involve">
+<div class="inv"><h3>Young people</h3><p>Aged 13 to 30 and living in or near Cambridge? Join an exchange, try a new sport and meet young people from across Europe. Many places are reserved for those who rarely get the chance to travel.</p></div>
+<div class="inv"><h3>Youth workers and coaches</h3><p>Volunteer as a group leader, run sessions, or join training abroad to learn new methods for inclusive work.</p></div>
+<div class="inv"><h3>Clubs, schools and organisations</h3><p>Host a European group, recruit participants with us, or become a partner in a future project.</p></div>
+</div>
+</div>
+</section>
+
+<section class="band contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap contact-grid">
+<div>
+<h2 id="contact-title">Let’s move forward together</h2>
+<p class="lede">Questions, ideas or interest in a project? Write to us and we will reply within a week.</p>
+<p style="margin-top:26px"><a class="mail" href="mailto:hello@cameunet.uk">hello@cameunet.uk</a></p>
+<p class="lede" style="margin-top:20px">Cambridge, England</p>
+</div>
+<svg class="mark" viewBox="30 20 740 766" role="img" aria-label="Cambridge Europe Network C mark"><use href="#cmark"/></svg>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="foot">
+<p>© 2026 Cambridge Europe Network CIC, a community interest company registered in England and Wales.</p>
+<p><em>Where Everyone Moves Forward.</em></p>
+</div>
+</footer>
+</body>
+</html>

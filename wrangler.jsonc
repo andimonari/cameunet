@@ -1,0 +1,9 @@
+{
+  "name": "cameunet",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "." },
+  "routes": [
+    { "pattern": "cameunet.uk", "custom_domain": true },
+    { "pattern": "www.cameunet.uk", "custom_domain": true }
+  ]
+}

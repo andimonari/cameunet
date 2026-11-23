@@ -1,0 +1,17 @@
+# CamEUnet
+
+The website of Cambridge Europe Network CIC, a community interest company in Cambridge. It works on youth exchanges, inclusive sport and digital skills with partners across Europe, and plans to take part in Erasmus+ once the UK rejoins in 2027.
+
+The site is a single static page. `index.html` holds the markup and styles, `hero.jpg` is the photo behind the top section, and `favicon.svg` is the "C" logo. There is no build step and no JavaScript.
+
+## Run it
+
+Open `index.html` in a browser, or serve the folder locally:
+
+```sh
+python3 -m http.server 8000
+```
+
+Then go to http://localhost:8000.
+
+Project knowledge (design notes, partners, how the logo and arch are built) lives in the `wiki/` folder.
